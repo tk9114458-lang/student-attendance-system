@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Attendance System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Attendance System</h1>
+
+        <p class="subtitle">
+            Manage students and record their attendance
+        </p>
+
+        <!-- Add Student Section -->
+        <div class="form-box">
+
+            <h2>Add Student</h2>
+
+            <form id="studentForm">
+
+                <input
+                    type="text"
+                    id="studentId"
+                    placeholder="Student ID"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Student Name"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="department"
+                    placeholder="Department"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="semester"
+                    placeholder="Semester"
+                    min="1"
+                    max="8"
+                    required
+                >
+
+                <button type="submit">
+                    Add Student
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- Search -->
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search student by ID or name"
+            >
+
+        </div>
+
+
+        <!-- Attendance Summary -->
+        <div class="summary">
+
+            <div class="summary-box">
+                <h3>Total Students</h3>
+                <p id="totalStudents">0</p>
+            </div>
+
+            <div class="summary-box">
+                <h3>Present</h3>
+                <p id="presentStudents">0</p>
+            </div>
+
+            <div class="summary-box">
+                <h3>Absent</h3>
+                <p id="absentStudents">0</p>
+            </div>
+
+        </div>
+
+
+        <!-- Student Table -->
+        <div class="table-box">
+
+            <h2>Student Records</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Semester</th>
+                        <th>Attendance</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="studentTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
