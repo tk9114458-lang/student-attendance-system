@@ -1,4 +1,4 @@
-let students = [;
+let students = [];
 
 const studentForm = document.getElementById("studentForm");
 const studentTable = document.getElementById("studentTable");
